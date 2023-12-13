@@ -35,6 +35,13 @@ localH2O = h2o.init()
 demo(h2o.kmeans)
 ```
 
+To generate the motifs, you'll also need `ggplot2` and `ggseqlogo`:
+
+```R
+install.packages("ggplot2")
+devtools::install_github("omarwagih/ggseqlogo")
+```
+
 Now, it's all set to install the package.
 
 ### Installing the package
@@ -42,7 +49,7 @@ Now, it's all set to install the package.
 The package resides in GitHub only. You will probably need `devtools` for that (`install.packages("devtools")`).
 
 ```R
-devtools::install_github("ssayols/bluntPred")
+devtools::install_github("ssayols/BTmotif")
 ```
 
 ## Run
