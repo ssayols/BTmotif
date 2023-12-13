@@ -1,6 +1,6 @@
-# bluntPred
+# BTmotif
 
-Prediction of blunt rate of Cas9 breaks using the XGBoost model trained with Chakrabarti's data.
+Derive Cas9 sequence determinants from BreakInspectoR output. Uses XGBoost and the full 20 bases of the protospacer (without taking into account the mismatches to the gRNA).
 
 ## Install
 
@@ -50,12 +50,9 @@ devtools::install_github("ssayols/bluntPred")
 Open the web app in your R console:
 
 ```R
-bluntPred::shiny_bluntPred()
+BTmotif::shiny_BTmotif()
 ```
 
-Paste a list of gRNAs targets and click on `Predict`.
+Paste a table of targets and click on `Go!`.
 The list can actually be a table with \<tab\> or \<comma\> separated fields.
-The gRNA sequence is expected to be in the *first* column.
-
-NOTE: Only the seed portion of the protospacer (this is, the last 10 nucloetides of the target sequence) are used for the prediction in this model.
-
+The columns are expected to be in this order: protospacer_sequence | blunt_rate.
